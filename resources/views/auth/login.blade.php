@@ -62,7 +62,18 @@
                                 </a>
                             </div>
                         </div>
+
+
                     </form>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-4">
+                            <a class="btn btn-primary" href="{{ url('auth/facebook') }}">
+                                Facebook
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

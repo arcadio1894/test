@@ -10,10 +10,10 @@ use Laravel\Socialite\Facades\Socialite;
 
 class SocialAuthController extends Controller
 {
-    // Metodo encargado de la redireccion a Facebook
-    public function redirectToProvider()
+    // Metodo encargado de la redireccion a proveedor
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('facebook')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
     // Metodo encargado de obtener la información del usuario
