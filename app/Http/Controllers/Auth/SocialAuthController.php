@@ -17,10 +17,10 @@ class SocialAuthController extends Controller
     }
 
     // Metodo encargado de obtener la información del usuario
-    public function handleProviderCallback()
+    public function handleProviderCallback($provider)
     {
         // Obtenemos los datos del usuario
-        $social_user = Socialite::driver('facebook')->user();
+        $social_user = Socialite::driver($provider)->user();
 
         dd($social_user);
         // Comprobamos si el usuario ya existe

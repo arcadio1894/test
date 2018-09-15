@@ -41,4 +41,10 @@ return [
         'redirect' => 'https://tucargape.com/auth/facebook/callback'
     ],
 
+    'twitter' => [
+        'client_id' => env('TWITTER_KEY'),
+        'client_secret' => env('TWITTER_SECRET'),
+        'redirect' => 'https://tucargape.com/auth/twitter/callback'
+    ],
+
 ];
