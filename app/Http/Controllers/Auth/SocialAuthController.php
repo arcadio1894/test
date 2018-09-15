@@ -21,8 +21,10 @@ class SocialAuthController extends Controller
     {
         // Obtenemos los datos del usuario
         $social_user = Socialite::driver('facebook')->user();
+
+        dd($social_user);
         // Comprobamos si el usuario ya existe
-        if ($user = User::where('email', $social_user->email)->first()) {
+        /*if ($user = User::where('email', $social_user->email)->first()) {
             return $this->authAndRedirect($user); // Login y redirección
         } else {
             // En caso de que no exista creamos un nuevo usuario con sus datos.
@@ -33,7 +35,7 @@ class SocialAuthController extends Controller
             ]);
 
             return $this->authAndRedirect($user); // Login y redirección
-        }
+        }*/
     }
 
     // Login y redirección
