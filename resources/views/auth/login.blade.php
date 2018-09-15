@@ -77,7 +77,23 @@
                     <div class="row">
                         <div class="col-md-8 offset-md-4">
                             <a class="btn btn-info" href="{{ url('auth/twitter') }}">
-                                Facebook
+                                Twitter
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-4">
+                            <a class="btn btn-success" href="{{ url('auth/github') }}">
+                                Github
+                            </a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-4">
+                            <a class="btn btn-warning" href="{{ url('auth/linkedin') }}">
+                                Linkedin
                             </a>
                         </div>
                     </div>

@@ -47,4 +47,16 @@ return [
         'redirect' => 'https://tucargape.com/auth/twitter/callback'
     ],
 
+    'github' => [
+        'client_id' => env('GITHUB_KEY'),
+        'client_secret' => env('GITHUB_SECRET'),
+        'redirect' => 'https://tucargape.com/auth/github/callback'
+    ],
+
+    'linkedin' => [
+        'client_id' => env('LINKEDIN_KEY'),
+        'client_secret' => env('LINKEDIN_SECRET'),
+        'redirect' => 'https://tucargape.com/auth/linkedin/callback'
+    ],
+
 ];
