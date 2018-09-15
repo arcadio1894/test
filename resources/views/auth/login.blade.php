@@ -73,6 +73,14 @@
                             </a>
                         </div>
                     </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-4">
+                            <a class="btn btn-info" href="{{ url('auth/twitter') }}">
+                                Facebook
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
             </div>
