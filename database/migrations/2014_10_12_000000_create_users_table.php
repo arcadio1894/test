@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('github_id')->nullable();
             $table->string('linkedin_id')->nullable();
             $table->string('email')->nullable();
-            $table->string('password')->nullable();
+            $table->string('password');
             $table->string('avatar')->nullable();
             $table->rememberToken();
             $table->timestamps();

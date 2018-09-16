@@ -22,20 +22,28 @@ class SocialAuthController extends Controller
         // Obtenemos los datos del usuario
         $social_user = Socialite::driver($provider)->user();
 
-        dd($social_user);
+        $user = User::where($provider . "_id", $provider->getId())
+            ->orWhere('email', $provider->getEmail())->first();
+
+        //dd($social_user);
         // Comprobamos si el usuario ya existe
-        /*if ($user = User::where('email', $social_user->email)->first()) {
+        if ($user) {
+            $user[$provider."_id"] = $provider->getId();
+            $user->avatar = $provider->getAvatar();
+            $user->save();
             return $this->authAndRedirect($user); // Login y redirección
         } else {
             // En caso de que no exista creamos un nuevo usuario con sus datos.
-            $user = User::create([
-                'name' => $social_user->name,
-                'email' => $social_user->email,
-                'avatar' => $social_user->avatar,
-            ]);
+            $user = new User();
+            $user[$provider."_id"] = $social_user->getId();
+            $user->name = $social_user->getName();
+            $user->email = $social_user->getEmail();
+            $user->avatar = $social_user->getAvatar();
+            $user->password = "";
+            $user->save();
 
             return $this->authAndRedirect($user); // Login y redirección
-        }*/
+        }
     }
 
     // Login y redirección
