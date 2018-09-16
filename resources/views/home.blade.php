@@ -15,6 +15,7 @@
                     @endif
 
                     You are logged in!
+                        <img src="{{ auth()->user()->avatar }}" alt="">
                 </div>
             </div>
         </div>
