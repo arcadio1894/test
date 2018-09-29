@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Log;
 */
 
 Artisan::command('inspire', function () {
-    $comment = $this->comment(Inspiring::quote());
+    $comment = Inspiring::quote();
+    $this->comment($comment);
     Log::info($comment);
 })->describe('Display an inspiring quote');
 
